@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Nico English Consultant</title>
+    <meta name="description" content="『英語学習の新常識』をご購入いただき、ありがとうございます。Nicoからのメッセージと特典のご案内です。">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'milk-tea': '#fdfbf7',     // ベースの生成り色
+                        'latte': '#e8e0d5',        // 少し濃いベージュ
+                        'olive': '#8a9a5b',        // アクセントのオリーブグリーン
+                        'mocha': '#5c544d',        // 文字色（濃いブラウングレー）
+                        'clay': '#d6c6b9',         // 装飾用
+                    },
+                    fontFamily: {
+                        'sans': ['"Zen Maru Gothic"', 'sans-serif'],
+                        'hand': ['"Caveat"', 'cursive'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for Cafe Natural Theme */
+        body {
+            background-color: #fdfbf7;
+            background-image: radial-gradient(#e8e0d5 1px, transparent 1px);
+            background-size: 24px 24px; /* ドット柄のテクスチャ */
+            color: #5c544d;
+            font-feature-settings: "palt";
+        }
+        
+        .paper-texture {
+            background-color: #fff;
+            background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+            box-shadow: 0 4px 20px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+        }
+
+        .polaroid {
+            background: #fff;
+            padding: 12px 12px 40px 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transform: rotate(-2deg);
+            transition: transform 0.3s ease;
+        }
+        .polaroid:hover {
+            transform: rotate(0deg) scale(1.02);
+            z-index: 10;
+        }
+
+        .tape {
+            background-color: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: absolute;
+            height: 30px;
+            width: 100px;
+            transform: rotate(-45deg);
+            top: -10px;
+            left: -30px;
+            opacity: 0.7;
+            backdrop-filter: blur(2px);
+        }
+
+        /* Scroll Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Stagger Delays */
+        .delay-100 { transition-delay: 0.1s; }
+        .delay-200 { transition-delay: 0.2s; }
+        .delay-300 { transition-delay: 0.3s; }
+
+        /* Button Hover */
+        .btn-hover {
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .btn-hover:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 10px 25px -5px rgba(138, 154, 91, 0.4);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-olive selection:text-white">
+
+    <div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-milk-tea transition-opacity duration-700 pointer-events-none">
+        <div class="text-center">
+            <p class="font-hand text-3xl text-olive animate-pulse">Just a moment...</p>
+        </div>
+    </div>
+
+    <main class="w-full overflow-hidden">
+
+        <section class="relative min-h-[80vh] flex flex-col items-center justify-center py-20 px-4">
+            <div class="absolute inset-0 z-0 opacity-20 pointer-events-none overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=1600" alt="" class="absolute top-0 left-0 w-full h-full object-cover opacity-50 blur-[2px]">
+            </div>
+            
+            <div class="relative z-10 text-center max-w-2xl mx-auto">
+                <h1 class="font-hand text-7xl md:text-9xl text-mocha mb-6 leading-none reveal delay-100">
+                    Thank You
+                </h1>
+                <p class="text-lg md:text-xl leading-relaxed text-mocha/80 font-medium reveal delay-200">
+                    『英語学習の新常識』をご購入いただき、<br>
+                    ありがとうございます。
+                </p>
+                <div class="mt-12 reveal delay-300 animate-float">
+                    <svg class="w-6 h-6 text-olive mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 md:py-32 px-4 relative">
+            <div class="max-w-3xl mx-auto paper-texture p-8 md:p-16 rounded-sm relative reveal">
+                <div class="tape top-[-15px] left-[50%] -translate-x-1/2 rotate-0 w-32 h-8 bg-white/40"></div>
+                
+                <div class="prose prose-stone prose-lg max-w-none font-sans text-mocha leading-loose">
+                    <p class="text-xl md:text-2xl font-bold mb-8 text-olive/80">
+                        『英語学習の新常識』を<br class="md:hidden">手にとってくださったあなたへ
+                    </p>
+                    
+                    <p class="mb-6">
+                        こんにちは、Nicoです。<br>
+                        この度は、本書を手にとっていただき、本当にありがとうございます。
+                    </p>
+                    
+                    <p class="mb-6">
+                        「よし、英語を頑張ろう！」と決意して購入してくださったその気持ち、とても嬉しいです。と同時に、これから始まる学習への期待と、ほんの少しの不安も入り混じっているかもしれませんね。
+                    </p>
+                    
+                    <p class="mb-6">
+                        「英語を話せるようになりたいけれど、いきなり英会話学校に行くのは怖い…」<br>
+                        そんなふうに思うこともあるかもしれません。
+                    </p>
+                    
+                    <p class="mb-6 font-bold bg-latte/30 inline-block px-2 rounded">
+                        でも、大丈夫です。<br>
+                        アウトプットの練習は、まずは自分ひとりでも始められます。
+                    </p>
+                    
+                    <p class="mb-6">
+                        誰にも聞かれず、恥ずかしくない環境で、自分のペースで言葉を紡ぐ練習をする。<br>
+                        それが自信につながり、いつか誰かと話すときの大きな力になります。
+                    </p>
+                    
+                    <p class="mb-12">
+                        今回ご用意した特典が、あなたの最初のトレーニングのパートナーとして、<br>
+                        楽しく英語に触れるきっかけになれば幸いです。
+                    </p>
+                    
+                    <div class="text-right mt-12">
+                        <p class="mb-2 text-sm text-mocha/60">あなたの英語学習が、<br>楽しく豊かなものになりますように。</p>
+                        <p class="font-hand text-4xl text-olive mt-4">Nico</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 px-4 bg-white/50 relative">
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
+                
+                <div class="w-full md:w-5/12 reveal">
+                    <div class="polaroid relative mx-auto max-w-xs md:max-w-full">
+                        <div class="aspect-[3/4] overflow-hidden bg-gray-100 relative group">
+                            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=800" 
+                                 alt="Nico Profile" 
+                                 class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                        <div class="mt-4 text-center font-hand text-xl text-gray-400">Nico</div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-7/12 reveal delay-100">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-olive flex items-center gap-3">
+                        <span class="w-8 h-[2px] bg-olive/50 block"></span>
+                        私も、英語が大の苦手でした。
+                    </h2>
+                    <div class="space-y-4 text-mocha leading-relaxed">
+                        <p>
+                            今は英語学習コンサルタントをしている私ですが、<br>
+                            昔は英語が本当に苦手で、コンプレックスの塊でした。
+                        </p>
+                        <p>
+                            単語も出てこない、聞き取れない、間違えるのが怖い。<br>
+                            その不安な気持ち、痛いほどよくわかります。
+                        </p>
+                        <p>
+                            だからこそ、あなたには<strong class="text-olive font-bold">「一人じゃないよ」</strong>と伝えたいんです。
+                        </p>
+                        <p>
+                            もし学習に行き詰まったり、寂しくなったりしたら、<br>
+                            いつでも私のThreadsに遊びにきてください。<br>
+                            そこには、同じように頑張る仲間と私がいます。
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <a href="https://www.threads.com/@nico___english" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-olive font-bold border-b-2 border-olive/30 hover:border-olive transition-colors pb-1">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.63 1.05c-6.19 0-11.23 5.04-11.23 11.23 0 4.64 2.87 8.65 6.94 10.42.43.18.67-.3.67-.53v-1.89c-3.15.68-3.82-1.52-3.82-1.52-.39-1.01-.96-1.28-.96-1.28-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.72-1.52-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.05-.12-.28-.51-1.44.11-3.01 0 0 .95-.3 3.11 1.16a10.82 10.82 0 015.66 0c2.16-1.46 3.11-1.16 3.11-1.16.62 1.57.23 2.73.11 3.01.73.8 1.17 1.81 1.17 3.05 0 4.35-2.65 5.31-5.18 5.59.41.35.78 1.05.78 2.12v3.15c0 .24.24.73.68.53 4.06-1.78 6.93-5.78 6.93-10.42C23.86 6.09 18.82 1.05 12.63 1.05z" fill="currentColor"></path></svg>
+                            Threadsでつながる
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 px-4 bg-latte/30 relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-white/40 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-olive/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-2xl mx-auto text-center relative z-10 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-mocha">特典のお受け取りはこちら</h2>
+                <p class="text-mocha/80 mb-10 leading-relaxed">
+                    『独り言英会話フレーズ100選』は、公式LINEにて配布しています。<br>
+                    以下のボタンからお受け取りいただき、日々の学習にお役立てください。
+                </p>
+                
+                <a href="https://lin.ee/QO9WMFcB" target="_blank" rel="noopener noreferrer" class="btn-hover inline-flex flex-col items-center justify-center bg-olive text-white w-full md:w-auto px-10 py-5 rounded-xl shadow-lg shadow-olive/20 group">
+                    <span class="text-lg md:text-xl font-bold tracking-wide">特典『独り言英会話フレーズ100選』を受け取る</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-mocha text-latte py-12 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="font-hand text-3xl mb-6">Nico English</h3>
+            <p class="text-xs opacity-50 font-sans tracking-widest">
+                &copy; 2026 Nico English Consultant. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Loading Animation
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 700);
+        });
+
+        // Intersection Observer for Reveal Animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll('.reveal');
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
